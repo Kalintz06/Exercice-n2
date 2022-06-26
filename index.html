@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="Cdv">
+      <div :class="Background + ' ' + Color ">
+        <h1>{{title}}</h1>
+        <p>{{Nom}}</p>
+        <p>{{Prenom}}</p>
+        <p>{{Entreprise}}</p>
+        <p>{{Email}}</p>
+        <p>{{Phone}}</p>
+
+
+      <div class="infos">
+        Nom
+        <input v-on:input="changeNom" />
+        Prenom
+        <input v-on:input="changePrenom" />
+        Entreprise
+        <input v-on:input="changeEntreprise" />
+        Email
+        <input v-on:input="changeEmail" />
+        Phone
+        <input v-on:input="changePhone" />
+
+        <div button="colors">
+          <button @click="changeColorBlue">bleu</button>
+          <button @click="changeColorRed">rouge</button>
+          <button @click="changeColorGreen">vert</button>
+
+          <button @click="changeTextColor">white</button>
+          <button @click="changeTextColor">black</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
